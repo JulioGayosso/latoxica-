@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="css/normalize.css" type="text/css" media="all" />
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
 
    <header class="header">
@@ -72,7 +73,7 @@
 
         <div class="contenido-ubicacion">
             <h2 class="fecha">¡Te desafiamos a ser tóxico! ¡Te desafiamos a ser libre! ¡Te desafiamos a ser parte de "La Tóxica"!</h2>
-            <p class="fecha">Av. Universidad 130, Colonia Casa Blanca 2da Secc, 86060 Villahermosa, Tab. Aun costado de Plaza las Américas</p>
+            <p class="fecha1">Av. Universidad 130, Colonia Casa Blanca 2da Secc, 86060 Villahermosa, Tab. Aun costado de Plaza las Américas</p>
         </div>
     </div>
 </div>
@@ -87,13 +88,11 @@
             <p>Nuestro compromiso es brindarte noches que nunca olvidarás. Forma parte de la comunidad "Tóxica" y crea recuerdos que durarán para siempre.</p>
             <p>"La Tóxica" no es solo un antro bar. ¡Es un movimiento, una experiencia, un estilo de vida! ¿Listos para adentrarse en lo desconocido y abrazar su lado más atrevido? Únete a nosotros y descubre por qué somos el lugar donde las almas más tóxicas se encuentran para brillar.</p>
         </div>
-            <div class="video">
-                <video class="video-nosotros" autoplay muted loop >
-                    <source src="media/estrella.mp4" type="video/mp4">
-                    <source src="media/estrella.ogg" type="video/ogg">
-                    <source src="media/estrella.webm" type="video/webm">
-                </video>
-            </div>
+        <picture class="abajo">
+            <source srcset="/img/estrellaNosotros.avif" type="image/avif">
+            <source srcset="/img/estrellaNosotros.webp" type="image/webp">
+            <img src="/img/estrellaNosotros.jpg" alt="imagen puerta">
+        </picture
 
     </div>
 </section>
@@ -175,9 +174,16 @@
 </section><!--  end videogaleria -->
 
 
-<section id="galeria" class="container-grid contenedor">
+<div>
   
-      
+    <h2 class="galeria-titulo">GALERIA</h2>
+
+
+</div>
+
+<section id="galeria" class="container-grid contenedor">
+
+   
         <img src="/img/1.jpeg"  alt="imagen1" class="img img-1">
         <img src="/img/2.jpeg" alt="imagen2" class="img img-2">
         <img src="/img/3.jpeg" alt="imagen3" class="img img-3">

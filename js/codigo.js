@@ -14,8 +14,49 @@ document.addEventListener('DOMContentLoaded', function() {
     
     loadVideo();
     getGaleria();
+    navegacionFija();
+    scrollNav();
+
     
 });
+
+function navegacionFija(){
+    const barra = document.querySelector('.header');
+    const ubicate = document.querySelector('.ubicate');
+    const body = document.querySelector('body');
+
+
+     window.addEventListener('scroll',function(){
+       
+
+        if(ubicate.getBoundingClientRect().bottom < 0){
+           barra.classList.add('fijo');
+           barra.classList.add('body-scroll');
+        }else{
+            barra.classList.remove('fijo');
+            barra.classList.remove('body-scroll');
+        }
+
+
+     });
+
+}
+
+function scrollNav() {
+    const enlaces = document.querySelectorAll('.navegacion__principal a'); // Agregado el punto antes de "navegacion__principal"
+
+    enlaces.forEach(enlace => {
+        enlace.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const seccionScroll = e.target.attributes.href.value;
+            const seccion = document.querySelector(seccionScroll);
+            seccion.scrollIntoView({ behavior: "smooth" });
+        });
+
+    });
+}
+
 
 
 function getGaleria(){

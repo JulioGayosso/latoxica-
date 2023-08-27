@@ -28,6 +28,10 @@ body {
     background-color: var(--segundo);
 }
 
+.body-scroll{
+    padding-top:5.6rem;
+}
+
 body.fijar-body {
     overflow: hidden;
 }
@@ -71,6 +75,18 @@ img {
 .header{
     background-color: var(--tercero);
 }
+
+@media (min-width: 768px) { 
+    .fijo{
+        left: 0;
+        top: 0;
+        position: fixed;
+        width: 100%;
+        box-shadow: .1rem .2rem .3rem #333;
+    }
+}
+
+
 
 .contenido__header{
     padding: 2rem;
@@ -148,28 +164,34 @@ img {
    /* estilos de video */
 
    .video{
+  position: relative;
   max-height: 70rem;
+  min-height: 50rem;
+  overflow: hidden;
+  /* max-height: 70rem;
   min-height: 50rem;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
-  
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 1; */
    }
 
 
    .overlay {
     position: absolute;
-    background: rgb(109,5,125);
-    background: linear-gradient(135deg, rgba(109,5,125,0.5) 0%, rgba(181,10,100,0.3) 100%);
-    height: 100%;
+    background: rgb(102, 1, 235);
+    background: linear-gradient(
+      270deg,
+      rgba(102, 1, 235, 0.5) 0%,
+      rgba(255, 0, 146, 0.30015756302521013) 100%);
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:center ;
    }
 
    .principal{
@@ -182,7 +204,7 @@ img {
 
    @media (min-width: 768px) {
      
-    .principal{
+    .principal {
     width: 100%;
     margin: auto;
     
@@ -201,6 +223,17 @@ img {
     margin:0;
 }
 
+video {
+    width: auto;
+    display:block;
+}
+
+@media (min-width: 768px) { 
+    video{
+        width: 100%;
+    }
+}
+
 
 .contenido-video p{
     background-color: var(--principal);
@@ -217,26 +250,25 @@ img {
 
 .ubicate{
     background-color: var(--tercero);
-    border: 1px solid var(--segundo);
+    border: 0.5px solid var(--segundo); 
+    
    
 }
 
 .ubicacion{
-   
     padding: 2rem 0;
     margin-top: 3rem;
     
 }
 
-/* .abajo{
-   
-} */
+
+
 
 @media (min-width: 768px) { 
     .ubicacion{
         display: grid;
         grid-template-columns: repeat(2 ,1fr);
-        column-gap: 2rem;
+        column-gap: 1rem;
         align-items:center;
     }
 }
@@ -256,8 +288,6 @@ img {
     
 }
 
-
-
 @media (min-width: 768px) {
     .contenido-ubicacion h2{
        text-align: left;
@@ -269,14 +299,39 @@ img {
     color: var(--blanco);
     font-weight: 700;
     text-align: center;
-    
+    font-size: 3.2rem;
+    font-style: italic;
+    line-height:1.5;
+    font-family: var(--fuentePrincipal);
+}
 
+.fecha1{
+    color:var(--negro);
+    font-weight: 700;
+    text-align: center;
+    font-size: 2.5rem;
+    font-style:oblique;
+    font-family: var(--fuenteSecundaria);
 }
 
 @media (min-width: 768px) {
     .fecha{
         text-align: left;
+        font-size: 4.5rem;
+        margin-bottom: 1rem;
+        font-style: italic;
+        line-height:1.8;
+        font-family: var(--fuentePrincipal);
     } 
+
+    .fecha1{
+        color:var(--negro);
+        font-weight: 700;
+        text-align: center;
+        font-size: 3.5rem;
+        font-style:oblique;
+        font-family: var(--fuenteSecundaria);
+    }
     
 }
 
@@ -285,7 +340,8 @@ img {
 }
 
 .grid-crea img {
-    /* transform: rotate(-6deg); */
+    transform: rotate(-6deg); 
+    margin-bottom: 1.5rem;
     border: .5rem solid var(--blanco);
     box-shadow: 9px 10px 5px -7px rgb( 0 0 0 / .35);
     
@@ -446,6 +502,16 @@ estilos videogaleria */
 
 /* 
 estilos de galeria */
+
+.galeria-titulo{
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+    font-size: 4rem;
+    color: var(--blanco);
+}
+
+
+
 
 .container-grid{
     display: grid;
