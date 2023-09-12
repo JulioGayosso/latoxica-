@@ -923,7 +923,7 @@ estilos de galeria */
 .contenido-modal{
     margin: auto;
     width: 60%;
-    height:6ch;
+    height:60%;
     background: var(--blanco);
     border-radius: 1rem;
     z-index:1000;
