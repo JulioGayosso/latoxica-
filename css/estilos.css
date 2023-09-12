@@ -872,8 +872,8 @@ estilos de galeria */
 /* estilos ventada modal */
 
 .img-patria{
-    width:80rem;
-    height:80rem;
+    width:40rem;
+    height:40rem;
   
     
 }
@@ -923,10 +923,10 @@ estilos de galeria */
 .contenido-modal{
     margin: auto;
     width: 60%;
-    height:80%;
+    height:6ch;
     background: var(--blanco);
     border-radius: 1rem;
-    z-index:600;
+    z-index:1000;
     padding:1rem;
 
 }
